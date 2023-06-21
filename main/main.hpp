@@ -63,6 +63,9 @@ using namespace std ;
 #elif defined(CONFIG_TUX_DEVICE_WT32_SC01_PLUS)
 // WT32-SC01 Plus (ESP32-S3 + 8Bit Parellel) with SD Card, Audio support
 #include "conf_WT32SCO1-Plus.h"         
+#elif defined(CONFIG_TUX_DEVICE_3248S035)
+// WT32-SC01 Plus (ESP32-S3 + 8Bit Parellel) with SD Card, Audio support
+#include "conf_3248S035.h"         
 #elif defined(CONFIG_TUX_DEVICE_ESP32S3SPI35)
 // Makerfabs ESP32S335D (ESP32-S3 + SPI) with SD Card, Audio support
 #include "conf_Makerfabs_S3_STFT.h" 

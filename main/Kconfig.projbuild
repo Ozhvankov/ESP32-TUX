@@ -13,6 +13,7 @@ menu "ESP32-TUX Configuration"
 
                 The corresponding CSV file in the partition directory is
                 partitions/partition-16MB.csv
+
         config TUX_DEVICE_ESP32S3SPI35
             bool "MakerFabs ESP32S3SPI35 - SPI - 16MB Flash"
             help
@@ -29,6 +30,14 @@ menu "ESP32-TUX Configuration"
                 The corresponding CSV file in the partition directory is
                 partitions/partition-4MB.csv
 
+        config TUX_DEVICE_3248S035
+            bool "HMI 3248S035 - SPI - 4MB Flash"
+            help
+                This is the device with 4MB Flash on a 3248S035 device.
+        
+                The corresponding CSV file in the partition directory is
+                partitions/partition-4MB.csv
+
         config TUX_DEVICE_WT32_SC01_PLUS
             bool "Wireless-Tag WT32-SC01-Plus - 8Bit Parallel - 8MB Flash"
             help
@@ -41,6 +50,7 @@ menu "ESP32-TUX Configuration"
     # TODO: Work in progress
     # config PARTITION_TABLE_CUSTOM_FILENAME  
     #     string "Selected custom filename"
+    #     default "partitions/partition-4MB.csv" if TUX_DEVICE_3248S035
     #     default "partitions/partition-4MB.csv" if TUX_DEVICE_WT32-SC01
     #     default "partitions/partition-8MB.csv" if TUX_DEVICE_WT32-SC01-PLUS
     #     default "partitions/partition-16MB.csv" if TUX_DEVICE_ESP32S3SPI35
@@ -48,6 +58,7 @@ menu "ESP32-TUX Configuration"
 
     # config PARTITION_TABLE_FILENAME  
     #     string "Selected PARTITION_TABLE_FILENAME"
+    #     default "partitions/partition-4MB.csv" if TUX_DEVICE_3248S035
     #     default "partitions/partition-4MB.csv" if TUX_DEVICE_WT32-SC01
     #     default "partitions/partition-8MB.csv" if TUX_DEVICE_WT32-SC01-PLUS
     #     default "partitions/partition-16MB.csv" if TUX_DEVICE_ESP32S3SPI35
