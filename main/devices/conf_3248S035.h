@@ -33,13 +33,19 @@ SOFTWARE.
 #define SPI_HOST_ID HSPI_HOST
 
 // Since SPI bus is shared, only CS PIN required
-#define SD_CS   GPIO_NUM_33
+
+// SD CARD - SPI
+#define SDSPI_HOST_ID SPI3_HOST
+#define SD_MISO       GPIO_NUM_19 
+#define SD_MOSI       GPIO_NUM_23
+#define SD_SCLK       GPIO_NUM_18
+#define SD_CS         GPIO_NUM_5
 
 // Portrait
 #define TFT_WIDTH   480
 #define TFT_HEIGHT  320
 
-//#define SD_SUPPORTED
+#define SD_SUPPORTED
 
 #define TFT_MOSI    13 
 #define TFT_MISO    12  // Set this PIN for using shared SPI option
